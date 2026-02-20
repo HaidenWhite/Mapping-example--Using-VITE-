@@ -11,4 +11,16 @@ L.tileLayer(
     }
 ).addTo(map);
 
+const homepos = L.latLng(50.85, -1.2);
+L.marker(homepos).addTo(map);
+
 map.setView(L.latLng(50.9, -1.4), 14);
+map.on("click", e => {
+    const pos = e.latlng;
+    alert(`You clicked at:${pos.lat} ${pos.lng}`);
+    const marker = L.marker(pos).addTo(map);
+    const text = prompt('Please enter some text');
+    if(text !== null) {
+        marker.bindPopup(text);
+    }
+});
