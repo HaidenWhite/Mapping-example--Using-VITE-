@@ -10,6 +10,7 @@ Requirements:
 - Leaflet and it's types
 - typescript tsx
 - express and it's types
+- vite ver 5.7.1
 
 Optional requirements:
 - If you wish to access markers through a database, better-sqlite-3 is required
